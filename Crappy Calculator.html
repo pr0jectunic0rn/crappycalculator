@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <style>
+    </style>
+  </head>
+  <body>
+    <h2 style="color: red;"><u>Calculator</u></h2>
+    <img src="https://i.redd.it/j2upahwnd5bz.jpg" width="400" height="250" alt="Calculator Cat">
+    <div style="border:1px solid black;">
+
+      <label for="num1">First number:</label><br>
+      <input type="number" class="math" id="num1" ><br>
+      <label for="num2">Second number:</label><br>
+      <input type="number" class="math" id="num2"><br>
+      <p>The sum is: <input id="answer"> </p>
+      <p>The difference is: <input id="difference"> </p>
+      <p>The product is: <input id="product"> </p>
+    </div>
+	<script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script>	
+	$(".math").on("change",function add()
+	{	
+		var numOne, numTwo, sum, diff, prod;
+		numOne = parseInt(document.getElementById("num1").value);
+		numTwo = parseInt(document.getElementById("num2").value);	
+		sum = numOne + numTwo;
+		diff = numOne - numTwo;
+		prod = numOne * numTwo;
+		document.getElementById("answer").value = sum;
+			if (sum<0) {
+				document.getElementById('answer').style.color = "blue"; }
+			else {document.getElementById('answer').style.color = "black";
+			}
+		document.getElementById("difference").value = diff;
+			if (diff<0) {
+				document.getElementById('difference').style.color = "blue"; }
+			else {document.getElementById('difference').style.color = "black";
+			}
+		document.getElementById("product").value = prod;
+			if (prod<0) {
+				document.getElementById('product').style.color = "blue"; }
+			else {document.getElementById('product').style.color = "black";
+			}
+	})
+	</script>
+  </body>
+</html>
+
